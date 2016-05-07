@@ -1,0 +1,13 @@
+<!-- {{label}} -->
+<div ng-controller="singleSelectCtrl">
+
+  <br><br>
+  <md-input-container>
+      <label>{{label}}</label>
+      <md-select ng-model="bindData" ng-change="reflect(bindData)">
+         <md-option ng-repeat=" item in domainList" value="{{item}}">
+               {{item}}
+          </md-option>
+      </md-select>
+  </md-input-container>
+</div>

@@ -1,20 +1,26 @@
 angular.module("customInputBoxDirectives")
   .directive("customInputBox", function(){
     return {
-      templateUrl: './text/template.html',
+      templateUrl: './customPartial.html',
       scope: {
-        class: "=",
+        class: "@",
         bindData: "=",
         label: "@",
-        type: "@"
+        type: "@",
+        domainList:"<",
+        id: "@",
+        required: "<"
+
       },
-      restrict: 'C',
       controller: function($scope){
         console.log("inside directive controller");
         console.log($scope);
-        $scope.mandatory="true";
-        $scope.change=function(changedVal) {
-          bindData = changedVal;
+        // $scope.mandatory="true";
+        $scope.reflect=function(changedVal) {
+          console.log("In reflect");
+          $scope.bindData = changedVal;
+          console.log(changedVal);
+
         }
       }
     }

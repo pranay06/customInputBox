@@ -12,9 +12,14 @@
   </head>
   <body ng-app="customInputBoxDirectives">
     <div ng-controller="outsideController">
-      <!-- <custom-input-box type="date" label="Check-in Date" mandatory="true" class="date" bind-data="checkinDate"></custom-input-box> -->
-      {{name}}
-      <div class="custom-input-box" type="text" label="Some Label" bind-data="name"></div>
+
+      Outside {{someName}}
+
+      <custom-input-box type="date" label="Check-inDate" mandatory="true" class="date" bind-data="checkinDate"></custom-input-box>
+      <custom-input-box type="text" label="SomeText" bind-data="someName"></custom-input-box>
+      Outside{{singleSelectedData}}
+      <custom-input-box type="singleSelect" label="{{someLabel}}" mandatory="true" class="singleSelect" bind-data="singleSelectedData" domain-list="singleSelectInputData"></custom-input-box>
+      <!-- <div class="custom-input-box" type="text" label="Some Label" bind-data="name"></div> -->
     </div>
 
 
@@ -32,8 +37,10 @@
     <script type="text/javascript" src="./date/controller.js">
 
     </script>
-        </script>
-        <script type="text/javascript" src="./text/controller.js">
+
+    <script type="text/javascript" src="./text/controller.js"></script>
+    <script type="text/javascript" src="./singleSelect/controller.js"></script>
+
 
   </body>
 </html>
