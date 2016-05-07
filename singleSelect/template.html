@@ -1,13 +1,37 @@
-<!-- {{label}} -->
+
 <div ng-controller="singleSelectCtrl">
 
   <br><br>
   <md-input-container>
       <label>{{label}}</label>
       <md-select ng-model="bindData" ng-change="reflect(bindData)">
-         <md-option ng-repeat=" item in domainList" value="{{item}}">
-               {{item}}
+        <div ng-if="listDataType =='object' ">
+          <md-option  ng-repeat="item in specificAttributes.domainList" value="{{item[specificAttributes.listValueKey]}}">
+                {{item[specificAttributes.listLabelKey]}}
           </md-option>
+        </div>
+        <div ng-if="listDataType =='element' ">
+          <md-option  ng-repeat="item in specificAttributes.domainList" value="{{item}}">
+                {{item}}
+          </md-option>
+        </div>
+        <!-- <div ng-if="specificAttributes.domainList.length>0">
+          <div ng-repeat-start="item in specificAttributes.domainList"></div>
+            <div ng-if="item.constructor === Object">
+               <md-option  value="{{item[specificAttributes.listValueKey]}}">
+                     {{item[specificAttributes.listLabelKey]}}
+               </md-option>
+            </div>
+
+            <md-option  value="{{item}}">
+                  {{item}}
+            </md-option>
+          <div ng-repeat-end=""></div> -->
+
+          <!-- <md-option ng-repeat=" item in specificAttributes.domainList" value="{{item}}">
+                {{item}}
+          </md-option> -->
+        </div>
       </md-select>
   </md-input-container>
 </div>

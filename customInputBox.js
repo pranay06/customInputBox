@@ -3,13 +3,14 @@ angular.module("customInputBoxDirectives")
     return {
       templateUrl: './customPartial.html',
       scope: {
-        class: "@",
+
         bindData: "=",
-        label: "@",
-        type: "@",
-        domainList:"<",
-        id: "@",
-        required: "<"
+        label: "<",
+        type: "<",
+        id: "<",
+        required: "<",
+        specificAttributes:"<"
+
 
       },
       controller: function($scope){

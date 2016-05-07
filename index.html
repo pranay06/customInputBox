@@ -18,8 +18,17 @@
       <custom-input-box type="date" label="Check-inDate" mandatory="true" class="date" bind-data="checkinDate"></custom-input-box>
       <custom-input-box type="text" label="SomeText" bind-data="someName"></custom-input-box>
       Outside{{singleSelectedData}}
-      <custom-input-box type="singleSelect" label="{{someLabel}}" mandatory="true" class="singleSelect" bind-data="singleSelectedData" domain-list="singleSelectInputData"></custom-input-box>
+      <!-- <custom-input-box type="singleSelect" label="{{someLabel}}" mandatory="true" class="singleSelect" bind-data="singleSelectedData"   domain-list="singleSelectInputData"></custom-input-box> -->
       <!-- <div class="custom-input-box" type="text" label="Some Label" bind-data="name"></div> -->
+
+    label is  {{customFieldData.displayName}}
+
+      <custom-input-box
+      type="customFieldData.type"
+      label="customFieldData.displayName"
+      mandatory="customFieldData.required"
+      bind-data="selectedData"   specific-attributes="customFieldData.specificAttributes">
+     </custom-input-box>
     </div>
 
 
