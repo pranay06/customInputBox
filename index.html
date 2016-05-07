@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Input Box</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.8/angular-material.css">
+
+    <!-- @bower:css start -->
+    <!-- @bower end -->
+
+  </head>
+  <body ng-app="customInputBoxDirectives">
+    <div ng-controller="outsideController">
+      <!-- <custom-input-box type="date" label="Check-in Date" mandatory="true" class="date" bind-data="checkinDate"></custom-input-box> -->
+      {{name}}
+      <div class="custom-input-box" type="text" label="Some Label" bind-data="name"></div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.8/angular-material.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="./customInputBox.js">
+
+    </script>
+    <script type="text/javascript" src="./date/controller.js">
+
+    </script>
+        </script>
+        <script type="text/javascript" src="./text/controller.js">
+
+  </body>
+</html>
