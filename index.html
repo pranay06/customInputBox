@@ -10,6 +10,7 @@
     <!-- @bower end -->
 
   </head>
+
   <body ng-app="customInputBoxDirectives">
     <div ng-controller="outsideController">
 
@@ -21,7 +22,7 @@
       <!-- <custom-input-box type="singleSelect" label="{{someLabel}}" mandatory="true" class="singleSelect" bind-data="singleSelectedData"   domain-list="singleSelectInputData"></custom-input-box> -->
       <!-- <div class="custom-input-box" type="text" label="Some Label" bind-data="name"></div> -->
 
-    label is  {{customFieldData.displayName}}
+  <br>  label is  {{customFieldData.displayName}}
 
       <custom-input-box
       type="customFieldData.type"
@@ -29,6 +30,12 @@
       mandatory="customFieldData.required"
       bind-data="selectedData"   specific-attributes="customFieldData.specificAttributes">
      </custom-input-box>
+
+
+    <!--  <custom-input-box
+     type="time"
+     bind-data="selectedTime">
+    </custom-input-box> -->
     </div>
 
 
@@ -49,7 +56,15 @@
 
     <script type="text/javascript" src="./text/controller.js"></script>
     <script type="text/javascript" src="./singleSelect/controller.js"></script>
+    <script type="text/javascript" src="./multiSelect/controller.js"></script>
+    <script type="text/javascript" src="./time/controller.js"></script>
 
 
+
+<!-- timePicker scripts -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/alenaksu/mdPickers/0.7.2/dist/mdPickers.min.js"></script>
   </body>
 </html>
