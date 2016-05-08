@@ -5,6 +5,11 @@
     <title>Custom Input Box</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.8/angular-material.css">
+    
+
+    <!-- css for timepicker start-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/alenaksu/mdPickers/0.7.2/dist/mdPickers.min.css">
+    <!-- css for timepicker end-->
 
     <!-- @bower:css start -->
     <!-- @bower end -->
@@ -31,12 +36,11 @@
       bind-data="selectedData"   specific-attributes="customFieldData.specificAttributes">
      </custom-input-box>
 
-
-    <!--  <custom-input-box
-     type="time"
+    <br>Outside ctrl selected time: {{selectedTime}}<br>
+     <custom-input-box
+     type="customFieldTime.type"
      bind-data="selectedTime">
-    </custom-input-box> -->
-    </div>
+    </custom-input-box>     </div>
 
 
 

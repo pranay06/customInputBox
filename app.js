@@ -6,18 +6,23 @@ angular.module('customInputBoxDirectives',["ngMaterial","mdPickers"])
     $scope.checkinDatelabel = "Checkin Date"
     // console.log("inside outsideController");
     console.log($scope);
+
+    $scope.selectedTime;
     $scope.someLabel="Some Label sadsadsad";
 
     $scope.singleSelectInputData=['element1','element2','element3','element4'];
 
+     $scope.customFieldTime={
+                           "type": "time"
+     }
     $scope.customFieldData = {
                     "required": true,
-                	"displayName": "Amenities",
-                	"id": "amenities",
-                	"type": "multiSelect",
-                    "specificAttributes":{
-                      "listLabelKey":'label',
-                      "listValueKey":'value',
+                	  "displayName": "Amenities",
+                	  "id": "amenities",
+                	   "type": "multiSelect",
+                     "specificAttributes":{
+                    "listLabelKey":'label',
+                    "listValueKey":'value',
                        /* "domainList":["pizza","burger","ice-cream"]*/
 
 
@@ -28,15 +33,15 @@ angular.module('customInputBoxDirectives',["ngMaterial","mdPickers"])
                                     ]*/
 
                       "domainList":[
-        { category: 'meat', name: 'Pepperoni' },
-        { category: 'meat', name: 'Sausage' },
-        { category: 'meat', name: 'Ground Beef' },
-        { category: 'meat', name: 'Bacon' },
-        { category: 'veg', name: 'Mushrooms' },
-        { category: 'veg', name: 'Onion' },
-        { category: 'veg', name: 'Green Pepper' },
-        { category: 'veg', name: 'Green Olives' }
-      ]
+                                { category: 'meat', name: 'Pepperoni' },
+                                { category: 'meat', name: 'Sausage' },
+                                { category: 'meat', name: 'Ground Beef' },
+                                { category: 'meat', name: 'Bacon' },
+                                { category: 'veg', name: 'Mushrooms' },
+                                { category: 'veg', name: 'Onion' },
+                                { category: 'veg', name: 'Green Pepper' },
+                                { category: 'veg', name: 'Green Olives' }
+                              ]
 
                      
                       }
