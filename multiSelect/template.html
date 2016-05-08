@@ -1,0 +1,38 @@
+<div ng-controller="multiSelectCtrl">
+<p>Inside multi select partial:label</p>
+{{listDataType}}
+
+<br>
+    <div ng-if="listDataType =='element' ">
+		<md-input-container>
+		    <label>{{label}}</label>
+		   	<md-select ng-model="bindData" ng-change="reflect(bindData)" multiple>
+		     
+		       <md-option ng-value="option" ng-repeat="option in specificAttributes.domainList">{{option}}</md-option>
+		     
+		    </md-select>
+		</md-input-container>
+    </div>
+
+    <div ng-if="listDataType =='object' ">
+     {{unique}} unique<br>
+     <!-- <div ng-repeat="uniq in unique"  ng-init="fil=uniq">
+         		  <p> unique is  {{uniq}}</p>
+         		  fill is {{fil}}
+         
+         	<div  ng-repeat="option in specificAttributes.domainList | filter:{ category:'+{{fil}}+' }">
+         	 option is {{option}}
+         	</div>
+      </div> -->
+		<md-input-container>
+		    <label>{{label}}</label>
+		   
+		    	<md-select ng-model="bindData" ng-change="reflect(bindData)" multiple>
+		   		    	<md-optgroup ng-repeat="uniq in unique" label={{uniq}}>
+		   
+		   		     		<md-option ng-value="option" ng-repeat="option in specificAttributes.domainList| filter:{category:'meat'}">{{option.name}}</md-option>
+		   		     	</md-optgroup>
+		   		    </md-select> 
+		</md-input-container>
+	</div>
+</div>
